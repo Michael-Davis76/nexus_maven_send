@@ -28,4 +28,4 @@ jobs:
       - name: Build with Maven Wrapper
         run: ./mvnw -B package
       - name: upload artifact
-        run: curl -v -u ${{secrets.USERNAME}}:${{secrets.PASSWORD}} --upload-file target/nexus_maven_send-SNAPSHOT.jar ${{secrets.URL}}
+        run: curl -v -u ${{secrets.USERNAME}}:${{secrets.PASSWORD}} --upload-file README.md ${{secrets.URL}}
