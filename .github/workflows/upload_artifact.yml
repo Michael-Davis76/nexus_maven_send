@@ -26,4 +26,4 @@ jobs:
           distribution: 'adopt'
           cache: maven
       - name: upload artifact
-        run: curl-v -u ${{secrets.USERNAME}}:${{secrets.PASSWORD}} --T ../../README.md ${{secrets.URL}}
+        run: curl -v -u ${{secrets.USERNAME}}:${{secrets.PASSWORD}} --T ../../README.md ${{secrets.URL}}
