@@ -27,4 +27,4 @@ jobs:
           cache: maven
       - name: upload artifact
         run: curl -v -u ${{secrets.USERNAME}}:${{secrets.PASSWORD}} --upload-file README.md ${{secrets.URL}} & \
-                curl -v -u ${{secrets.USERNAME}}:${{secrets.PASSWORD}} --upload-file $GITHUB_WORKSPACE/reshi_boy.jpg ${{secrets.RESHI_URL}}
+                curl -v -u ${{secrets.USERNAME}}:${{secrets.PASSWORD}} --upload-file reshi_boy.jpg ${{secrets.RESHI_URL}}
