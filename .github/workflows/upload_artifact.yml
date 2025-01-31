@@ -25,6 +25,7 @@ jobs:
           java-version: ${{matrix.java}}
           distribution: 'adopt'
           cache: maven
-      - name: upload artifact
-        run: curl -v -u ${{secrets.USERNAME}}:${{secrets.PASSWORD}} --upload-file README.md ${{secrets.URL}} & \
-                curl -v -u ${{secrets.USERNAME}}:${{secrets.PASSWORD}} --upload-file reshi_boy.jpg ${{secrets.RESHI_URL}}
+      - name: upload README.md artifact
+        run: curl -v -u ${{secrets.USERNAME}}:${{secrets.PASSWORD}} --upload-file README.md ${{secrets.URL}}
+      - name: upload jpg of Reshi
+        run: curl -v -u ${{secrets.USERNAME}}:${{secrets.PASSWORD}} --upload-file reshi_boy.jpg ${{secrets.RESHI_URL}}
