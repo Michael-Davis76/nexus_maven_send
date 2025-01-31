@@ -26,4 +26,5 @@ jobs:
           distribution: 'adopt'
           cache: maven
       - name: upload artifact
-        run: curl -v -u ${{secrets.USERNAME}}:${{secrets.PASSWORD}} --upload-file README.md ${{secrets.URL}}
+        run: curl -v -u ${{secrets.USERNAME}}:${{secrets.PASSWORD}} --upload-file README.md ${{secrets.URL}} &&\
+                curl -v -u ${{secrets.USERNAME}}:${{secrets.PASSWORD}} --upload-file $GITHUB_WORKSPACE/reshi_boy.jpg ${{secrets.URL}}
